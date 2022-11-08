@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>change demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+ 
+</head>
+<body>
+ 
+<select name="statusy" id="dane">
+<option></option>
+  <option value='1'>Pierwszy</option>
+  <option value='2'>Drugi</option>
+  <option value='3'>Trzeci</option>
+  <option value='4'>Czwarty</option>
+  <option value='5'>Piąty</option>
+  <option value='6'>Szósty</option>
+</select>
+<div></div>
+ 
+<script>
+$( "#dane" )
+  .change(function () {
+    var str = "";
+    str = $( "select option:selected" ).val();   
+    
+	if(str==1){
+		$('#wynik').show(200);
+	} else {
+		$('#wynik').hide(200);
+	}
+	
+  })
+  
+</script>
+ 
+ <p id="wynik">Pierwszy</p>
+  <script >
+  $('#wynik').hide();
+  </script>
+</body>
+</html>
